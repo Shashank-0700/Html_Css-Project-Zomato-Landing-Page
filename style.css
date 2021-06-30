@@ -28,6 +28,7 @@ body
     padding: 12px;
     border: none;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .container {
@@ -62,14 +63,52 @@ body
 }
 
 .hero__image__container {
+    position: relative;
     width: 100%;
+}
+
+.hero__image__shape {
+    position: absolute;
+    z-index: -5;
+    right: 2 ;
 }
 
 .hero__image  {
+    position: absolute;
     width: 100%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+/* I dunno if below linw is rightor wrng anyway i just wrote it ! */
+
+.hero__image__pattern{
+    position: relative;
+    z-index: -5;
+    width: 100%;
+    right: 2 ;
+    
 }
 
 
+/* for the text size of "order food....." */ 
+
+
+.hero__text {
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0px; /* top n bottom    lft n right*/
+}
+
+
+/* Menu Styles */
+
+.food__menu__card {
+    width: 100%;
+}
+.food__image {
+    width: 100%;
+}
 
 
 /* Media Queries */
@@ -89,7 +128,7 @@ body
 
     .button__primary 
     {
-        padding: 20px;
+        padding: 12px 20px;
         font-size: 20px;
     }
     .hero__container{
@@ -104,16 +143,18 @@ body
 
 
 @media (min-width: 1020px ){
-    .hero__image__container{
-        width: 500px ;
-        height: 500px ;
-    }
+    
     .container{
-        max-width: 1015px;
+        max-width: 900px;
+    }
+    .hero__text{
+        font-size: 50px;
     }
     
 }
 
 @media (min-width: 1400px) {
-
+    .container{
+        max-width: 1250px;
+    }
 }
